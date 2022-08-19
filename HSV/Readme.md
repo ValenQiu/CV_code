@@ -14,7 +14,7 @@
    * Show the filtered contours and use their position to calculate the center point (can be used to calculate the edge or other points relate to contours. 
 
 ```python
-left_point_x = np.min(box[:, 0])
+    left_point_x = np.min(box[:, 0])
     right_point_x = np.max(box[:, 0])
     top_point_y = np.min(box[:, 1])
     bottom_point_y = np.max(box[:, 1])
