@@ -1,15 +1,15 @@
 ## Useful codes of HSV method to process images through colors
 
-#### HSV_testing.py
+#### [HSV_testing.py](https://github.com/ValenQiu/Computer-Vision/blob/main/HSV/HSV_testing.py)
   - Used for testing the range of H, S, V
   By draging the bar, can use it to confirm the range of HSV
   <img src="IMG/HSV_Range_v3.png" width="500px">
   
-#### HSV_centerPoint.py
+#### [HSV_centerPoint.py](https://github.com/ValenQiu/Computer-Vision/blob/main/HSV/HSV_cneterPoint.py)
    * Used for detecting the center point of the target. 
    * First detect the image and extract the target color from the image. 
-   * Then use 'erode' to process the edge & small dots for a more accurate result. 
-   * Draw contours and mark their positions by using the function 'drawMyContours'. 
+   * Then use `erode` to process the edge & small dots for a more accurate result. 
+   * Draw contours and mark their positions by using the function `drawMyContours`. 
    * Use a filter to filter out some unexpected contours by counting the length of the contour. 
    * Show the filtered contours and use their position to calculate the center point (can be used to calculate the edge or other points relate to contours. 
 
