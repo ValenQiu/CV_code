@@ -13,7 +13,8 @@
    * Use a filter to filter out some unexpected contours by counting the length of the contour. 
    * Show the filtered contours and use their position to calculate the center point (can be used to calculate the edge or other points relate to contours. 
    
-    ```python
+    ```
+    
     left_point_x = np.min(box[:, 0])
     right_point_x = np.max(box[:, 0])
     top_point_y = np.min(box[:, 1])
@@ -27,6 +28,7 @@
     center_point_x = (left_point_x + right_point_x) / 2
     center_point_y = (top_point_y + bottom_point_y) / 2
     center_point = np.int0([center_point_x, center_point_y])
+    
     ```
     
     
