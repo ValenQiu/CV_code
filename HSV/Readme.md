@@ -1,9 +1,9 @@
-# This is the useful code of HSV method to process images through colors
+## Useful codes of HSV method to process images through colors
 
 #### HSV_testing.py
   - Used for testing the range of H, S, V
   By draging the bar, can use it to confirm the range of HSV
-  ![image](IMG/HSV_Range_v3.png)
+  <img src="IMG/HSV_Range_v3.png" width="500px">
   
 #### HSV_centerPoint.py
    * Used for detecting the center point of the target. 
