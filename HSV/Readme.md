@@ -7,12 +7,12 @@
   
 #### HSV_centerPoint.py
    * Used for detecting the center point of the target. 
-    * first detect the image and extract the target color from the image. 
-    * then use 'erode' to process the edge & small dots for a more accurate result. 
-    * draw contours and mark their positions by using the function 'drawMyContours'. 
-    * use a filter to filter out some unexpected contours by counting the length of the contour. 
-    * show the filtered contours and use their position to calculate the center point (can be used to calculate the edge or other points relate to contours. 
-    
+   * First detect the image and extract the target color from the image. 
+   * Then use 'erode' to process the edge & small dots for a more accurate result. 
+   * Draw contours and mark their positions by using the function 'drawMyContours'. 
+   * Use a filter to filter out some unexpected contours by counting the length of the contour. 
+   * Show the filtered contours and use their position to calculate the center point (can be used to calculate the edge or other points relate to contours. 
+   * 
     ```Ruby
     left_point_x = np.min(box[:, 0])
     right_point_x = np.max(box[:, 0])
