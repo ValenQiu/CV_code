@@ -1,5 +1,36 @@
 # a function of detecting the pose of aruco codes
 
+import array
+import pyrealsense2 as rs
+import cv2
+import cv2.aruco as aruco
+import numpy as np
+
+# Camera
+fx = 461.84448242
+fy = 443.28289795
+cx = 308.69522309
+cy = 177.70244623
+k1 = 0.04266696
+k2 = -0.11292418
+p1 = 0.00306782
+p2 = -0.00409565
+k3 = 0.02006348
+cameraMatrix = np.array([[fx, 0, cx],
+                         [0, fy, cy],
+                         [0, 0, 1]])
+dist = np.array([k1, k2, p1, p2, k3])
+
+# Configure depth and color streams
+pipeline = rs.pipeline()
+config = rs.config()
+# config.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
+config.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
+
+# Start streaming
+pipeline.start(config)
+align = rs.align(rs.stream.color)
+
 def DetectArucoPose(self):
         # get frames
         # this one is for realsense, need to start the pipeline  before using this function
@@ -32,4 +63,11 @@ def DetectArucoPose(self):
                 aruco.drawDetectedMarkers(frame, corners, ids)
                 # print("rvec[", i, ",: , ：]: ", rvec[i, :, :])
             cv2.imshow("arucoDetector", frame)
+        
+# demo function
+while True:
+        key = cv2.waitKey(1)
+    if key & 0xFF == ord('q') or key == 27:
+        break
+    DetectArucoPose()
             
