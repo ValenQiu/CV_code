@@ -5,7 +5,7 @@ Check the `Flirpy` library for details: https://github.com/LJMUAstroecology/flir
 
 ### Grab image
 The following program will grab the raw data from the camera, 
-··· Python
+```Python
 from flirpy.camera.lepton import Lepton
 
 camera = Lepton()
@@ -16,7 +16,7 @@ print(camera.frame_mean)
 print(camera.ffc_temp_k)
 print(camera.fpa_temp_k)
 camera.close()
-···
+```
 
 ### Show the image
 First convery the raw
