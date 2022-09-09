@@ -18,8 +18,8 @@ print(camera.fpa_temp_k)
 camera.close()
 ```
 > the relationship between N (one of the raw data in image) and temperature:
-> Kelvin temperature = N/100
-> Celsius = N/100 - 273
+>   Kelvin temperature = N/100，
+>   Celsius = N/100 - 273
 
 #### Show the image
 First convery the raw into 8-bit array, and then show the image by `OpenCV`
@@ -28,11 +28,11 @@ First convery the raw into 8-bit array, and then show the image by `OpenCV`
 img = np.asarray(image)
 img = 255 * (img - img.min()) / (img.max - img.min())
 # apply colormap
-    img_col = cv2.applyColorMap(img.astype(np.uint8), cv2.COLORMAP_INFERNO)
-    # show image
-    cv2.namedWindow("Thermal", 0)
-    cv2.resizeWindow("Thermal", 300, 300)
-    cv2.imshow("Thermal", img_col)
+img_col = cv2.applyColorMap(img.astype(np.uint8), cv2.COLORMAP_INFERNO)
+# show image
+cv2.namedWindow("Thermal", 0)
+cv2.resizeWindow("Thermal", 300, 300)
+cv2.imshow("Thermal", img_col)
 ```
 
 #### Center axis 骨架提取
