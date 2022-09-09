@@ -40,11 +40,12 @@ Can directly get the highest temperature by applying the following code, result 
 ```Python
 tem_max = img.max() / 100 -273
 ```
-To get the temperature, check the detail from the [`Thermal_Image.py`](./Thermal_Image.py)
+To get the temperature, check the detail from the function `get_temperature` in the [`Thermal_Image.py`](./Thermal_Image.py)
 
 ## Center axis 骨架提取
 About how to get the center axis of image, check the `morphology` module in the library `skimage`: https://blog.csdn.net/qq_36756866/article/details/115485629
 See the pip webpage for installing: https://pypi.org/project/scikit-image/
+
 
 
 
