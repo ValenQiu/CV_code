@@ -17,9 +17,9 @@ print(camera.ffc_temp_k)
 print(camera.fpa_temp_k)
 camera.close()
 ```
-> the relationship between N (one of the raw data in image) and temperature:
->   Kelvin temperature = N/100，
->   Celsius = N/100 - 273
+> the relationship between N (one of the raw data in image) and temperature: 
+>  Kelvin temperature = N/100，
+>  Celsius = N/100 - 273
 
 #### Show the image
 First convery the raw into 8-bit array, and then show the image by `OpenCV`
@@ -35,8 +35,17 @@ cv2.resizeWindow("Thermal", 300, 300)
 cv2.imshow("Thermal", img_col)
 ```
 
-#### Center axis 骨架提取
+#### Get temperature
+Can directly get the highest temperature by applying the following code, result is in celsius
+```Python
+tem_max = img.max() / 100 -273
+```
+To get the temperature, check the detail from the [`Thermal_Image.py`](./Thermal_Image.py)
+
+## Center axis 骨架提取
 About how to get the center axis of image, check the `morphology` module in the library `skimage`: https://blog.csdn.net/qq_36756866/article/details/115485629
 See the pip webpage for installing: https://pypi.org/project/scikit-image/
+
+
 
 
