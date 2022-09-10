@@ -1,5 +1,7 @@
 # Thermal Camera
 
+Python 3.6
+
 ## Flirpy
 Check the `Flirpy` library for details: https://github.com/LJMUAstroecology/flirpy
 
