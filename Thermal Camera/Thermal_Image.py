@@ -94,7 +94,9 @@ def get_contours(img):
     cv2.imshow("Medial_axis", dist_on_skel)
 
     # get contours
-    contours, contours_x, contours_y = list()
+    contours = list()
+    contours_x = list()
+    contours_y = list()
     length, width = img.shape
     for i in range(length):
         for j in range(width):
