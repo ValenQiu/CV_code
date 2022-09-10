@@ -12,7 +12,7 @@
 
 [`HSV`](https://github.com/ValenQiu/Computer-Vision/tree/main/HSV)
 
-[`Therrmal Camera`](./Thermal Camera)
+[`Therrmal Camera`]
 
 
 Keep updating...
